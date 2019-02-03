@@ -88,3 +88,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//RETUNS NUMBER OF SYSTEM CALLS MADE SINCE BOOT
+int
+sys_getreadcount(void)
+{
+  return counter;
+}
