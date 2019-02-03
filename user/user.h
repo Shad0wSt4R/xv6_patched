@@ -25,6 +25,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int getreadcount(void); //ADDED GETREADCOUNT HERE
 
 // user library functions (ulib.c)
 int stat(char*, struct stat*);
