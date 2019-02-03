@@ -23,5 +23,6 @@
 #define SYS_sbrk   19
 #define SYS_sleep  20
 #define SYS_uptime 21
+#define SYS_readcount 22 //ADDED READCOUNT HERE
 
 #endif // _SYSCALL_H_
