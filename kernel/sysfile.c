@@ -9,6 +9,14 @@
 #include "fcntl.h"
 #include "sysfunc.h"
 
+int readcounter = 0; //ADDED COUNTER FOR GETREADCOUNT
+
+int //ADDED RETURN FUNCTIONALITY FOR GETREADCOUNT
+sys_getreadcount(void)
+{
+  return readcounter;
+}
+
 // Fetch the nth word-sized system call argument as a file descriptor
 // and return both the descriptor and the corresponding struct file.
 static int
@@ -67,6 +75,9 @@ sys_read(void)
 
   if(argfd(0, 0, &f) < 0 || argint(2, &n) < 0 || argptr(1, &p, n) < 0)
     return -1;
+
+  readcounter = readcounter + 1; //ADDED TO COUNTER FOR READ SYSCALL
+  
   return fileread(f, p, n);
 }
 
