@@ -10,10 +10,10 @@ USER_PROGS := \
 	ln\
 	ls\
 	mkdir\
+	readcounter\
 	rm\
 	sh\
 	stressfs\
-	syscallcount\
 	tester\
 	usertests\
 	wc\
