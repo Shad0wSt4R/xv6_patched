@@ -77,9 +77,6 @@ argstr(int n, char **pp)
   return fetchstr(proc, addr, pp);
 }
 
-int syscounter = 0; //THIS COUNTER TRACKS NUMBER OF SYSTEM CALLS
-extern int sys_getreadcount(void);
-
 // syscall function declarations moved to sysfunc.h so compiler
 // can catch definitions that don't match
 
