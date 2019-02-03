@@ -5,6 +5,6 @@
 int
 main(void)
 {
-  printf(1, "There have been %d system calls since boot-up\n", getreadcount());
+  print(1,"There were a total of %d calls to read system.\n",getreadcount());
   exit();
 }
